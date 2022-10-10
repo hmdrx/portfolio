@@ -1,0 +1,379 @@
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+.container-items {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* -------------mobile menu-------------- */
+#toogle-menu {
+  display: none;
+}
+.mobile-menu {
+  display: none;
+}
+@media screen and (max-width: 426px) {
+  .mobile-menu {
+    height: calc(100vh - 4.89em);
+    width: 80vw;
+    position: fixed;
+    background-color: rgb(197, 219, 242);
+    display: none;
+    flex-direction: column;
+    margin-top: 4.89em;
+  }
+  .mobile-menu a {
+    padding: 0.5em 2em;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: rgb(43, 42, 42);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .menu-show {
+    display: flex;
+  }
+}
+
+/* -----x--------mobile menu-------x------- */
+
+/* ------------header---------------- */
+#header {
+  box-sizing: border-box;
+  background-color: rgb(197, 219, 242);
+  width: 100%;
+  position: sticky;
+  z-index: 99999;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0.6rem 2rem;
+}
+
+.head-items {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-grow: 1;
+}
+.head-items a {
+  text-decoration: none;
+  color: rgb(56, 52, 49);
+  margin: 1% 1%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 0.9rem;
+}
+#login {
+  width: 7rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+#signup {
+  width: 7rem;
+  border: 1px solid black;
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(255, 224, 27);
+}
+
+#head-item__one {
+  display: flex;
+  justify-content: flex-start;
+}
+#head-item__two {
+  display: flex;
+  justify-content: center;
+}
+#head-item__three {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* -----x-------header------x---------- */
+
+/* ---------------MAIN----------------- */
+#main {
+  padding: 0;
+}
+
+/* ------------section-one-------------- */
+.section-one {
+  display: flex;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5% 15%;
+  align-items: flex-end;
+  background-color: rgb(197, 219, 242);
+}
+.section-one__right {
+  flex-basis: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+.section-one__right img {
+  width: 100%;
+  height: auto;
+}
+.section-one__left {
+  flex-basis: 50%;
+  text-align: left;
+  padding: 1rem;
+}
+.section-one__left h1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3.5vw;
+}
+.section-one__left p {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1.7rem;
+  margin-bottom: 2.8rem;
+}
+
+/* ------x------section-one-----x--------- */
+
+/* ------------section-two-------------- */
+.section-two {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 5% 15%;
+  align-items: center;
+}
+.section-two__left {
+  display: flex;
+}
+.section-two__left img {
+  width: 80%;
+  height: auto;
+}
+.section-two__right {
+  text-align: left;
+  padding: 1rem;
+}
+.section-two__right h1 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 3.5vw;
+}
+.section-two__right p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 2.8rem;
+}
+
+/* ------x------section-two-----x--------- */
+
+/* --------------section-three------------------- */
+.section-three {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 5% 20%;
+  background-color: rgb(255, 224, 27);
+}
+.section-three h1 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 6vw;
+}
+.section-three p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.6vw;
+  /* margin: 4rem 0; */
+}
+.section-btn {
+  align-self: center;
+  width: 8rem;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: black;
+  border: 1.3px solid black;
+  border-radius: 1.2rem;
+}
+
+/* -------x-------section-three------x------------- */
+
+/* ------------------section__four---------------- */
+.section-four {
+  padding: 0 15%;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.section-four__cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.card {
+  flex-basis: 16rem;
+  margin: 0 0.6rem;
+  text-align: left;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.card h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0.2rem 0;
+  margin: 2rem 0 1rem 0;
+}
+.card p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.section-four__cards .card-p {
+  font-size: 1rem;
+}
+
+/* ---------x---------section__four-------x--------- */
+/* --------x-------MAIN--------x--------- */
+
+/* --------------footer-------------------- */
+#footer {
+  padding: 0 15%;
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgb(239, 238, 234);
+}
+.footer-cols {
+  flex-basis: 16%;
+  text-align: left;
+}
+.footer-cols a {
+  padding: 7px 2px;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: rgb(49, 47, 47);
+}
+
+/* ------x--------footer---------x----------- */
+
+@media screen and (max-width: 1024px) {
+  .section-one {
+    flex-direction: row;
+    padding: 5% 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #head-item__one {
+    display: none;
+  }
+  .section-one {
+    flex-direction: column;
+    padding: 5% 12%;
+  }
+  .section-two {
+    flex-direction: column;
+    padding: 5% 4%;
+  }
+  .section-four {
+    padding: 5% 3%;
+  }
+  .card {
+    flex-basis: 12rem;
+  }
+  #footer {
+    padding: 2rem 5%;
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  #head-item__three {
+    display: none;
+  }
+  #head-item__one {
+    display: none;
+  }
+
+  .head-items {
+    /* border: 1px solid red; */
+    justify-content: left;
+  }
+
+  #head-item__two {
+    /* border: 1px solid red;   */
+    flex-basis: 80%;
+  }
+  #toogle-menu {
+    display: flex;
+    font-size: x-large;
+  }
+
+  #head-item__two h1 {
+    font-size: x-large;
+  }
+  .section-one {
+    flex-direction: column;
+    padding: 5% 5%;
+  }
+  .section-one__left h1 {
+    font-size: 2em;
+  }
+  .section-one__left p {
+    font-size: 1.5em;
+  }
+  .section-two {
+    flex-direction: column;
+    padding: 5% 5%;
+  }
+
+  .section-two__right h1 {
+    font-size: 2em;
+  }
+
+  .section-three {
+    padding: 7% 5%;
+  }
+  .section-three h1 {
+    font-size: 3em;
+  }
+  .section-three p {
+    font-size: 1.4em;
+  }
+  .section-four {
+    padding: 5% 5%;
+  }
+  .section-four__cards {
+    flex-direction: column;
+    margin-top: 8%;
+  }
+  .card {
+    margin: 1rem 0.6rem;
+  }
+  #footer {
+    padding: 2rem 5%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-cols a {
+    font-size: 0.8rem;
+  }
+}
