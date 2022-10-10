@@ -1,3 +1,14 @@
+:root {
+  --header: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  --p-font: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --anchor: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
 body {
   margin: 0;
 }
@@ -7,38 +18,54 @@ body {
 
 .container-items {
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.8rem;
 }
 
 /* -------------mobile menu-------------- */
 #toogle-menu {
   display: none;
 }
+.ri-menu-line,
+.ri-close-line {
+  font-size: 2rem;
+}
 .mobile-menu {
   display: none;
 }
-@media screen and (max-width: 426px) {
+/* -----------MEDIA QUERY FOR TOOGLE MENU---------- */
+@media screen and (max-width: 768px) {
+  #toogle-menu {
+    display: flex;
+  }
   .mobile-menu {
-    height: calc(100vh - 4.89em);
-    width: 80vw;
+    height: calc(100vh - 7.8rem);
+    width: 30vw;
+    box-shadow: 0.2rem 0 12rem grey;
     position: fixed;
     background-color: rgb(197, 219, 242);
     display: none;
     flex-direction: column;
-    margin-top: 4.89em;
+    margin-top: 7.8rem;
   }
   .mobile-menu a {
-    padding: 0.5em 2em;
+    font-size: 1.6rem;
+    padding: 0.8rem 3.2rem;
     text-decoration: none;
-    font-size: 1.2em;
     color: rgb(43, 42, 42);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: var(--anchor);
   }
   .menu-show {
     display: flex;
   }
 }
+@media screen and (max-width: 426px) {
+  .mobile-menu {
+    height: calc(100vh - 6.8rem);
+    width: 80vw;
+    margin-top: 6.8rem;
+  }
+}
+/* ------X-----MEDIA QUERY FOR TOOGLE MENU----x------ */
 
 /* -----x--------mobile menu-------x------- */
 
@@ -54,7 +81,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0.6rem 2rem;
+  padding: 0.96rem 3.2rem;
 }
 
 .head-items {
@@ -66,40 +93,32 @@ body {
 .head-items a {
   text-decoration: none;
   color: rgb(56, 52, 49);
-  margin: 1% 1%;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-  font-size: 0.9rem;
+  margin: 1.2rem 1.2rem;
+  font-family: var(--anchor);
+  font-size: 1.44rem;
 }
-#login {
-  width: 7rem;
-  border: 1px solid black;
-  border-radius: 2rem;
-  padding: 0.6rem 1rem;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-}
-#signup {
-  width: 7rem;
-  border: 1px solid black;
-  border-radius: 2rem;
-  padding: 0.6rem 1rem;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-  background-color: rgb(255, 224, 27);
-}
-
 #head-item__one {
-  display: flex;
   justify-content: flex-start;
 }
 #head-item__two {
-  display: flex;
   justify-content: center;
+  text-transform: uppercase;
 }
 #head-item__three {
-  display: flex;
   justify-content: flex-end;
+}
+
+#login,
+#signup {
+  width: 11.2rem;
+  border: 0.1rem solid black;
+  border-radius: 3.2rem;
+  padding: 0.96rem 1.6rem;
+  font-family: var(--anchor);
+  background-color: rgb(255, 224, 27);
+}
+#login {
+  background-color: transparent;
 }
 
 /* -----x-------header------x---------- */
@@ -115,7 +134,7 @@ body {
   box-sizing: border-box;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 5% 15%;
+  padding: 6rem 18rem;
   align-items: flex-end;
   background-color: rgb(197, 219, 242);
 }
@@ -131,16 +150,20 @@ body {
 .section-one__left {
   flex-basis: 50%;
   text-align: left;
-  padding: 1rem;
+  padding: 1.6rem;
 }
 .section-one__left h1 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 3.5vw;
+  font-family: var(--header);
+  font-size: 4.8rem;
+}
+.section-one__left h5 {
+  font-family: var(--header);
+  font-size: 2rem;
 }
 .section-one__left p {
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 1.7rem;
-  margin-bottom: 2.8rem;
+  font-family: var(--p-font);
+  font-size: 2.4rem;
+  margin-bottom: 4.48rem;
 }
 
 /* ------x------section-one-----x--------- */
@@ -150,7 +173,7 @@ body {
   display: flex;
   box-sizing: border-box;
   justify-content: space-between;
-  padding: 5% 15%;
+  padding: 6rem 18rem;
   align-items: center;
 }
 .section-two__left {
@@ -162,18 +185,16 @@ body {
 }
 .section-two__right {
   text-align: left;
-  padding: 1rem;
+  padding: 1.6rem;
 }
 .section-two__right h1 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-  font-size: 3.5vw;
+  font-family: var(--header);
+  font-size: 3rem;
 }
 .section-two__right p {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 1rem;
-  margin-bottom: 2.8rem;
+  font-family: var(--p-font);
+  font-size: 1.6rem;
+  margin-bottom: 4.48rem;
 }
 
 /* ------x------section-two-----x--------- */
@@ -184,46 +205,47 @@ body {
   flex-direction: column;
   align-content: center;
   justify-content: center;
-  padding: 5% 20%;
+  padding: 6rem 24rem;
   background-color: rgb(255, 224, 27);
 }
 .section-three h1 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 6vw;
+  font-family: var(--header);
+  font-size: 3rem;
 }
 .section-three p {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2.6vw;
-  /* margin: 4rem 0; */
+  font-family: var(--p-font);
+  font-size: 2rem;
 }
 .section-btn {
+  font-size: 1.6rem;
   align-self: center;
-  width: 8rem;
-  padding: 0.6rem 1rem;
+  width: 12.8rem;
+  padding: 0.96rem 1.6rem;
   text-decoration: none;
   color: black;
-  border: 1.3px solid black;
-  border-radius: 1.2rem;
+  border: 0.13rem solid black;
+  border-radius: 2.08rem;
+  text-transform: capitalize;
 }
 
 /* -------x-------section-three------x------------- */
 
 /* ------------------section__four---------------- */
 .section-four {
-  padding: 0 15%;
+  padding: 1.6rem 18rem;
   text-align: left;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: var(--header);
 }
 .section-four__cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin-top: 4.8rem;
 }
 .card {
-  flex-basis: 16rem;
-  margin: 0 0.6rem;
+  flex-basis: 25.6rem;
+  margin: 0 0.96rem;
   text-align: left;
 }
 .card img {
@@ -231,18 +253,17 @@ body {
   height: auto;
 }
 .card h5 {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0.2rem 0;
-  margin: 2rem 0 1rem 0;
+  font-size: 1.6rem;
+  font-family: var(--header);
+  margin: 3.2rem 0 1.6rem 0;
 }
 .card p {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-family: var(--p-font);
+  font-size: 2.08rem;
+  margin-bottom: 1.6rem;
 }
 .section-four__cards .card-p {
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 
 /* ---------x---------section__four-------x--------- */
@@ -250,8 +271,8 @@ body {
 
 /* --------------footer-------------------- */
 #footer {
-  padding: 0 15%;
-  padding-top: 2rem;
+  padding: 0 18rem;
+  padding-top: 3.2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -261,21 +282,30 @@ body {
   flex-basis: 16%;
   text-align: left;
 }
+.footer-cols h3 {
+  font-size: 1.6rem;
+}
+.footer-cols p {
+  font-family: var(--anchor);
+  font-size: 1.2rem;
+}
 .footer-cols a {
-  padding: 7px 2px;
+  padding: 0.7rem 0.2rem;
   display: block;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
+  font-family: var(--anchor);
+  font-size: 1.2rem;
   text-decoration: none;
   color: rgb(49, 47, 47);
 }
 
 /* ------x--------footer---------x----------- */
 
+/* ------------MEDIA QUERY-------------- */
+
 @media screen and (max-width: 1024px) {
   .section-one {
     flex-direction: row;
-    padding: 5% 5%;
+    padding: 6rem 6rem;
   }
 }
 
@@ -285,26 +315,31 @@ body {
   }
   .section-one {
     flex-direction: column;
-    padding: 5% 12%;
+    padding: 6rem 4.8rem;
   }
   .section-two {
     flex-direction: column;
-    padding: 5% 4%;
+    padding: 6rem 4.8rem;
+  }
+  .section-three {
+    padding: 6rem 4.8rem;
   }
   .section-four {
-    padding: 5% 3%;
+    padding: 6rem 3.6rem;
   }
-  .card {
-    flex-basis: 12rem;
-  }
+
   #footer {
-    padding: 2rem 5%;
+    padding: 3.2rem 6rem;
     display: flex;
     flex-direction: row;
   }
 }
 
 @media screen and (max-width: 426px) {
+  html {
+    font-size: 65%;
+  }
+
   #head-item__three {
     display: none;
   }
@@ -313,67 +348,62 @@ body {
   }
 
   .head-items {
-    /* border: 1px solid red; */
     justify-content: left;
   }
 
   #head-item__two {
-    /* border: 1px solid red;   */
+    flex-basis: 80%;
+  }
+  #head-item__two {
     flex-basis: 80%;
   }
   #toogle-menu {
     display: flex;
-    font-size: x-large;
   }
 
-  #head-item__two h1 {
-    font-size: x-large;
-  }
   .section-one {
     flex-direction: column;
-    padding: 5% 5%;
+    padding: 1.6rem 3.2rem;
   }
-  .section-one__left h1 {
-    font-size: 2em;
-  }
-  .section-one__left p {
-    font-size: 1.5em;
-  }
+
   .section-two {
     flex-direction: column;
-    padding: 5% 5%;
+    padding: 1.6rem 3.2rem;
   }
-
-  .section-two__right h1 {
-    font-size: 2em;
-  }
-
   .section-three {
-    padding: 7% 5%;
-  }
-  .section-three h1 {
-    font-size: 3em;
-  }
-  .section-three p {
-    font-size: 1.4em;
+    padding: 1.6rem 3.2rem;
   }
   .section-four {
-    padding: 5% 5%;
+    padding: 1.6rem 3.2rem;
   }
   .section-four__cards {
     flex-direction: column;
-    margin-top: 8%;
+    margin-top: 1.2rem;
   }
   .card {
-    margin: 1rem 0.6rem;
+    margin: 1.6rem 0.96rem;
   }
   #footer {
-    padding: 2rem 5%;
+    padding: 1.6rem 3.2rem;
     display: flex;
     flex-direction: column;
   }
+}
 
-  .footer-cols a {
-    font-size: 0.8rem;
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 60%;
   }
+
+  .section-one,
+  .section-two,
+  .section-three,
+  .section-four,
+  #footer {
+    flex-direction: column;
+    padding: 1.6rem 1.2rem;
+  }
+}
+#header {
+  padding: 0.96rem 1.6rem;
 }
