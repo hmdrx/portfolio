@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.55f41523.css",
+    "main.js": "/static/js/main.a7329c71.js",
+    "static/media/humendra.jpg": "/static/media/humendra.23ab8d0a536480383b43.jpg",
+    "static/media/bg.svg": "/static/media/bg.bf5738bd5044a64e0186.svg",
+    "index.html": "/index.html",
+    "main.55f41523.css.map": "/static/css/main.55f41523.css.map",
+    "main.a7329c71.js.map": "/static/js/main.a7329c71.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55f41523.css",
+    "static/js/main.a7329c71.js"
+  ]
+}
